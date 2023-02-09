@@ -1,0 +1,84 @@
+<!docutype html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook</title>
+</head>
+<body>
+    
+	<link rel="stylesheet" href="face.css">
+	
+    <section class="section1">
+	    <div class="container">
+	        <div class="face">
+			    <div class="heading">
+				    <h1>facebook</h1>
+					<p>Facebook helps you connect and share with the people in your life.</p>
+				</div>
+				<div class="login">
+				    <div class="input">
+						<input id="email" type="text" placeholder="Email address or phone number"><br>
+						<h3 id="empty"></h3>
+						<input id="pwd" type="password" placeholder="password"><br>
+						<h3 id="number"></h3>
+					</div>
+					<div class="log">
+					    <button id="btn" onClick="login()">Log in</button>
+					</div>
+					<div class="get">
+					    <a href="#">Forgotten password?</a>
+					</div>
+					<hr>
+					<div class="con">
+					   <a href="#">create new account</a>
+				    </div>
+				</div>
+		    </div>
+		</div>  
+        <div class="account">
+		    <h1>Sign up</h1>
+			<p>it's quick and easy</p>
+			<hr>
+			<div class="detail">
+				<input type="text" placeholder="FirstName">
+				<input type="text" placeholder="SurName">
+				<input type="email" type="number"  placeholder="Mobile number or email address">
+			   <input type="password" placeholder="new Password">
+			</div>
+			<span>Date of Birth?</span>
+			
+			
+        </div>		
+	</section>
+	
+	<script>
+	    var logi=document.getElementById("btn");
+		logi.addEventListener("click",validate);
+		function validate(event){
+		event.preventDefault();
+		var inp1=document.getElementById("email").value;
+		var inp2=document.getElementById("pwd").value;
+		var error1=document.getElementById("empty");
+		var error2=document.getElementById("number");
+		if(inp1===""&& inp2===""){
+		   error1.innerText="email cannot be blank";
+		   error2.innerText="password cannot be blank";
+		}
+		else if(inp1==""){
+		    error1.innerHTML="email cannot be blank";
+		}
+		else if(inp2==""){
+		     error2.innerHTML="password cannot be blank";
+			 }
+	}
+			 function login(){
+			     var log=document.getElementById("email").value;
+			     var ans=document.getElementById("pwd").value;
+				 if(log!="" &&ans!=""){
+				 window.location.href="https://jsfiddle.net/velmurugansp/zka8we1u/"
+				 }
+			 }
+	</script>
+</body>
+</html>
